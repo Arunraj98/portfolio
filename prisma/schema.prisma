@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Enum defining the source of a contact message
+enum MessageSource {
+  WHATSAPP
+  TELEGRAM
+  FORM
+}
+
+// Model to store contact form and messaging notifications
+model ContactMessage {
+  id        String        @id @default(uuid())
+  name      String
+  email     String
+  message   String
+  source    MessageSource
+  createdAt DateTime      @default(now())
+
+  @@map("contact_messages")
+}
+
+// Model to persist interactive AI chat assistant sessions
+model ChatSession {
+  id        String   @id @default(uuid())
+  sessionId String   @unique // Track distinct visitor/browser sessions
+  messages  Json     // JSON structure containing the history of chat messages
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("chat_sessions")
+}
