@@ -13,18 +13,15 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 const connectionString = process.env.DATABASE_URL;
-if (!connectionString) {
-  throw new Error("DATABASE_URL is not defined in the environment.");
-}
 
 // 1. Initialize the Prisma Neon driver adapter directly with configuration (Prisma v7 syntax)
-const adapter = new PrismaNeon({ connectionString });
+const adapter = connectionString ? new PrismaNeon({ connectionString }) : undefined;
 
 // 2. Create the PrismaClient singleton using the driver adapter
 export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
-    adapter,
+    ...(adapter ? { adapter } : {}),
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
   });
 
