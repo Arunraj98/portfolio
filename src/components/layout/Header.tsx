@@ -63,7 +63,7 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "sticky top-0 z-50 w-full border-b transition-all duration-300 bg-background/80 backdrop-blur-md",
+        "fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 bg-background/80 backdrop-blur-md",
         isScrolled ? "border-surface/80 shadow-md" : "border-surface/30"
       )}
     >
