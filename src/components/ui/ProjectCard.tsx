@@ -7,16 +7,18 @@ import { Project } from "@/lib/data/projects";
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onViewDetails: () => void;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project, index, onViewDetails }: ProjectCardProps) {
   const formattedIndex = String(index + 1).padStart(2, "0");
 
   return (
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="group relative w-full bg-surface/40 hover:bg-surface/80 p-8 border-y border-r border-surface/50 hover:border-accent/40 border-l-4 border-l-accent/40 hover:border-l-accent flex flex-col justify-between min-h-[300px] transition-colors duration-300 overflow-hidden cursor-default"
+      onClick={onViewDetails}
+      className="group relative w-full bg-surface/40 hover:bg-surface/80 p-8 border-y border-r border-surface/50 hover:border-accent/40 border-l-4 border-l-accent/40 hover:border-l-accent flex flex-col justify-between min-h-[300px] transition-all duration-300 overflow-hidden cursor-pointer"
     >
       {/* Background Watermark Project Number */}
       <span className="absolute bottom-[-10px] right-2 text-8xl sm:text-[120px] font-sans font-black text-foreground/5 opacity-[0.03] group-hover:opacity-[0.08] select-none pointer-events-none transition-opacity duration-300">

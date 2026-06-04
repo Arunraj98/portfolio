@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Right Side: Monospace social anchors */}
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/Arunraj98"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent flex items-center gap-1 transition-colors focus:outline-none"
@@ -44,7 +44,7 @@ export default function Footer() {
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/arunraj98"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs uppercase tracking-wider text-muted hover:text-accent flex items-center gap-1 transition-colors focus:outline-none"

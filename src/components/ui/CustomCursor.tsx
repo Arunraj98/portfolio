@@ -11,7 +11,7 @@ export default function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { stiffness: 450, damping: 30 };
+  const springConfig = { stiffness: 800, damping: 40 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
@@ -99,11 +99,11 @@ export default function CustomCursor() {
         transition={{ type: "tween", ease: "backOut", duration: 0.25 }}
         className="fixed pointer-events-none z-[99999] rounded-full"
       />
-      {/* Inner Pinpoint Dot */}
+      {/* Inner Pinpoint Dot (Uses raw cursorX/Y to track mouse 1:1 with 0 lag) */}
       <motion.div
         style={{
-          left: cursorXSpring,
-          top: cursorYSpring,
+          left: cursorX,
+          top: cursorY,
           translateX: "-50%",
           translateY: "-50%",
         }}

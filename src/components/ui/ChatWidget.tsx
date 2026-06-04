@@ -150,7 +150,7 @@ export default function ChatWidget() {
             </div>
 
             {/* Chat Messages Log */}
-            <div className="flex-grow p-4 overflow-y-auto space-y-4 flex flex-col">
+            <div data-lenis-prevent className="flex-grow p-4 overflow-y-auto space-y-4 flex flex-col">
               {messages.length === 0 ? (
                 <div className="my-auto flex flex-col items-center justify-center text-center p-6 space-y-3">
                   <div className="p-3 bg-surface/30 border border-surface/50 rounded-2xl text-accent">
