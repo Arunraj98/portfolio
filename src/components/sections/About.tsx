@@ -65,7 +65,7 @@ export default function About() {
               {/* Color tint overlay that fades out on hover */}
               <div className="absolute inset-0 bg-accent/5 mix-blend-color z-10 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none" />
               <Image 
-                src="/profile_pic.jfif" 
+                src="/profile_pic.jpg" 
                 alt="Arunraj A Profile Picture" 
                 width={320}
                 height={320}
