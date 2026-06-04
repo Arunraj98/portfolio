@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
     const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash",
       systemInstruction,
-      tools: [{ googleSearchRetrieval: {} }],
+      tools: [{ googleSearch: {} } as any],
     });
 
     // 4. Map client-side message history to Gemini API format
