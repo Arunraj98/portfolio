@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, Send, X, Trash2, Sparkles, AlertCircle } from "lucide-react";
+import { Bot, Send, X, Trash2, Sparkles, AlertCircle } from "lucide-react";
 import { useChat } from "@/hooks/useChat";
 import {
   useChatMessages,
@@ -71,12 +71,20 @@ export default function ChatWidget() {
     <>
       {/* Floating Chat Bubble Button */}
       <div className={cn("fixed bottom-6 right-6 z-50", isOpen && "hidden md:block")}>
+        {/* Subtle AI Pulse Ring */}
+        {!isOpen && (
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0, 0.4] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+            className="absolute inset-0 bg-accent/30 rounded-full pointer-events-none"
+          />
+        )}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={cn(
-            "relative flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-colors focus:outline-none border",
+            "relative flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-colors focus:outline-none border z-10",
             isOpen
               ? "bg-surface border-accent/30 text-accent"
               : "bg-accent border-accent/20 text-background"
@@ -84,9 +92,30 @@ export default function ChatWidget() {
           aria-label="Toggle chat assistant"
         >
           {isOpen ? (
-            <X className="w-6 h-6" />
+            <motion.div
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <X className="w-6 h-6" />
+            </motion.div>
           ) : (
-            <MessageSquare className="w-6 h-6" />
+            <div className="relative flex items-center justify-center">
+              <motion.div
+                animate={{ y: [0, -2, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                className="relative"
+              >
+                <Bot className="w-6.5 h-6.5" />
+                <motion.div
+                  animate={{ scale: [0.85, 1.15, 0.85], rotate: [0, 15, -15, 0] }}
+                  transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+                  className="absolute -top-1 -right-1 text-background"
+                >
+                  <Sparkles className="w-3.5 h-3.5 fill-current" />
+                </motion.div>
+              </motion.div>
+            </div>
           )}
 
           {/* Unread Message Notification Badge */}
@@ -96,7 +125,7 @@ export default function ChatWidget() {
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 font-mono text-[10px] font-bold text-white shadow-md"
+                className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 font-mono text-[10px] font-bold text-white shadow-md z-20"
               >
                 {unreadCount}
               </motion.span>
