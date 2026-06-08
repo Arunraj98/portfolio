@@ -204,7 +204,7 @@ export default function ChatWidget() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
                       className={cn(
-                        "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm font-sans leading-relaxed whitespace-pre-wrap",
+                        "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm font-sans leading-relaxed whitespace-pre-wrap break-words",
                         isUser
                           ? "bg-accent text-background font-medium self-end rounded-tr-none"
                           : msg.content.startsWith("Error:")
@@ -215,7 +215,7 @@ export default function ChatWidget() {
                       {!isUser && msg.content.startsWith("Error:") && (
                         <AlertCircle className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
                       )}
-                      <div>{msg.content}</div>
+                      <div className="min-w-0">{msg.content}</div>
                     </motion.div>
                   );
                 })
