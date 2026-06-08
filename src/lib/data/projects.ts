@@ -10,70 +10,68 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    title: "LIMS Patient Messaging Platform",
-    role: "Solo Lead Engineer",
-    tech: "WhatsApp & Telegram API · .NET 4.7.2 · DevExpress · SQL Server",
-    desc: "Solo end-to-end delivery of a full patient communication platform. Engineered a Meta-approved PDF workaround, dual-QR onboarding, and a real-time bidirectional chat system. Self-initiated without a formal specification, eliminating all manual report dispatch.",
-    period: "Feb 2026 – Present",
-    tags: ["Enterprise", "API Integration", "Healthcare"],
+    title: "Developer Portfolio — Next.js 16 + Gemini AI",
+    role: "Full Stack Developer",
+    tech: "Next.js 16 · TypeScript · Tailwind CSS · Framer Motion · Zustand · Prisma · Neon · Vercel · Gemini 2.5 Flash · Google Search Tool",
+    desc: "Personal portfolio site built with Next.js 16 (App Router), Tailwind CSS, and Framer Motion. Includes a Gemini 2.5 Flash-powered AI chatbot with Google Search grounding for live Q&A on skills and projects. Data layer uses Prisma with Neon serverless Postgres; deployed on Vercel.",
+    period: "2025 – Present",
+    tags: ["Next.js 16", "AI Chatbot", "Vercel", "Prisma"],
     highlights: [
-      "Meta-approved document-header template workaround enabling single-click PDF report delivery with zero prior patient interaction.",
-      "Complete WhatsApp settings module including an in-app template builder with real-time approval status tracking.",
-      "Dual QR registration bot strategy mapping patient ID parameters to Telegram bot URLs.",
-      "Real-time bidirectional chat with RBAC, PDF attachments, and active message logs inside LIMS."
+      "Personal portfolio site built with Next.js 16 (App Router), Tailwind CSS, and Framer Motion.",
+      "Includes a Gemini 2.5 Flash-powered AI chatbot with Google Search grounding for live Q&A on skills and projects.",
+      "Data layer uses Prisma with Neon serverless Postgres; deployed on Vercel."
     ]
   },
   {
-    title: "Azure DevOps CI/CD Pipeline",
+    title: "LIMS Patient Messaging Platform",
+    role: "Solo Lead Engineer",
+    tech: ".NET 4.7.2 · WinForms · WhatsApp Business API · Telegram Bot API · DevExpress",
+    desc: "End-to-end messaging integration inside a .NET WinForms LIMS: WhatsApp lab report delivery with in-app template management, Telegram bot patient registration with dual-QR onboarding, and a real-time staff-patient chat module with RBAC and PDF support.",
+    period: "Feb 2026 – Present",
+    tags: ["WhatsApp API", "Telegram Bot API", ".NET WinForms", "DevExpress"],
+    highlights: [
+      "Designed and delivered a WhatsApp-based lab report dispatch system integrated into an existing .NET WinForms LIMS — replacing a fully manual process.",
+      "Developed a custom Meta message template builder within the LIMS UI, handling template creation, Meta submission, approval tracking, and a Send Logs dashboard.",
+      "Architected a Telegram Bot patient registration flow using a dual-QR approach: bill-specific QR codes for returning patients and a lab-wide QR for walk-in registration, with a three-step fallback.",
+      "Built a real-time bidirectional messaging module inside the LIMS — staff-to-patient chat with PDF attachments, message management, and role-based access control."
+    ]
+  },
+  {
+    title: "Azure DevOps CI/CD — Mobile Build Automation",
     role: "DevOps Engineer",
     tech: "Azure DevOps · Ionic · Angular · Android · iOS",
-    desc: "Engineered zero-touch CI/CD automation pipelines for Ionic Android and iOS builds, reducing mobile compile and release cycle times by 85%. Requires no manual steps post-merge, remaining in continuous use.",
-    period: "Sep – Oct 2024",
-    tags: ["DevOps", "Mobile", "Automation"],
+    desc: "Designed automated build and release pipelines for Ionic Android and iOS apps on Azure DevOps. Reduced release cycle from ~48 hours to ~3 hours. Pipelines remain in active use.",
+    period: "Sep 2024 – Oct 2024",
+    tags: ["Azure DevOps", "Ionic", "CI/CD", "Automation"],
     highlights: [
-      "Reduced mobile release cycles from 48 hours to 3 hours.",
-      "Automated keystore signing, plist updates, and build delivery pipelines.",
-      "Maintained zero-touch builds in production for over 18 months."
+      "Designed automated build and release pipelines for Ionic Android and iOS apps on Azure DevOps.",
+      "Reduced release cycle from ~48 hours to ~3 hours.",
+      "Pipelines remain in active use."
     ]
   },
   {
     title: "Angular Enterprise Migration",
     role: "Migration Lead",
-    tech: "Angular v12-v20 · RxJS · NgRx · SCSS · TypeScript",
-    desc: "Directed 8 major version upgrades across live enterprise applications with zero production downtime. Built a custom shared component library adopted org-wide, cutting cross-project boilerplate code.",
-    period: "May – Aug 2025",
-    tags: ["Migration", "Architecture"],
+    tech: "Angular v12–v20 · RxJS · NgRx · TypeScript · SCSS",
+    desc: "Led incremental Angular version upgrades (v12 through v20) across multiple live applications. Managed dependency conflicts, NgRx API changes, and coordinated regression testing to ensure production stability throughout.",
+    period: "May 2025 – Aug 2025",
+    tags: ["Angular", "Upgrade", "NgRx", "Migration"],
     highlights: [
-      "8 major upgrades completed on production environments with zero downtime.",
-      "Shared component library (loaders, alerts, logs) reduced project boilerplate by 30%."
+      "Led incremental Angular version upgrades (v12 through v20) across multiple live applications.",
+      "Managed dependency conflicts and NgRx API changes.",
+      "Coordinated regression testing to ensure production stability throughout."
     ]
   },
   {
-    title: "oneLEAD — Lead Management Suite",
-    role: "Lead Engineer",
-    tech: "Angular · ag-Grid · Google Maps API · TypeScript",
-    desc: "Developed a high-performance lead management SPA with ag-Grid sorting, filtering, and pagination plus Google Maps geocoding. Delivered on schedule with zero post-release defects.",
-    period: "Jul – Aug 2024",
-    tags: ["SPA", "Enterprise"]
-  },
-  {
-    title: "Node-RED Notification Engine",
+    title: "Node-RED Real-Time Notification Engine",
     role: "Architect",
-    tech: "Node-RED · Angular · REST APIs · Webhooks",
-    desc: "Designed and deployed a workflow-based notification engine in one working day, achieving 100% production readiness on first deployment with zero subsequent rework requested.",
-    period: "Aug – Sep 2023",
-    tags: ["Backend", "Real-time"],
+    tech: "Node-RED · Angular · REST APIs",
+    desc: "Built a workflow-based real-time notification engine using Node-RED, integrated with an Angular frontend. Delivered and deployed within a single working day.",
+    period: "Aug 2023 – Sep 2023",
+    tags: ["Node-RED", "Real-Time", "Angular", "Backend"],
     highlights: [
-      "Initiated, designed, and deployed within a single 24-hour cycle.",
-      "Zero post-release defects or rework requests."
+      "Built a workflow-based real-time notification engine using Node-RED, integrated with an Angular frontend.",
+      "Delivered and deployed within a single working day."
     ]
-  },
-  {
-    title: "Financial Information Platform",
-    role: "Software Engineer",
-    tech: "Angular · Ionic · Azure DevOps · Android · iOS",
-    desc: "Produced a finance manager Angular SPA and converted it into a cross-platform Ionic mobile app. Deployed across Dev and UAT environments with full UI/UX, testing, and CI/CD pipeline coverage.",
-    period: "Mar – Apr 2024",
-    tags: ["Finance", "Mobile"]
   }
 ];

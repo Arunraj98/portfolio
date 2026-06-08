@@ -37,7 +37,7 @@ export default function About() {
   };
 
   const highlights = [
-    { icon: Briefcase, label: "Experience", value: "3y 9m" },
+    { icon: Briefcase, label: "Experience", value: "3.5+ Years" },
     { icon: Rocket, label: "Apps Shipped", value: "17+" },
     { icon: RefreshCw, label: "Migrations Led", value: "8" },
     { icon: CheckCircle2, label: "POC Success", value: "100%" },
@@ -83,7 +83,7 @@ export default function About() {
             className="lg:col-span-7 flex flex-col gap-6 text-muted text-sm sm:text-base leading-relaxed font-sans"
           >
             <p>
-              I am a Senior Software Engineer at Citrus Informatics, Kochi, with 3 years and 9 months of experience building premium, enterprise-grade applications. I specialize in designing robust frontends, automating deployments, and scaling single-page applications.
+              I am a Senior Software Engineer at Citrus Informatics, Kochi, with 3.5+ years of experience building premium, enterprise-grade applications. I specialize in designing robust frontends, automating deployments, and scaling single-page applications.
             </p>
             <p>
               My track record includes developing a critical WhatsApp Business API workaround, a Telegram dual-QR strategy, delivering 17+ single-page applications, and engineering zero-touch Azure DevOps CI/CD pipelines that reduced build-to-release cycles by 85%.

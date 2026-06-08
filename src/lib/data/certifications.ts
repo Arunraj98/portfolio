@@ -6,24 +6,24 @@ export interface Certification {
 
 export const CERTIFICATIONS: Certification[] = [
   {
-    title: "Introduction to Agent Skills",
-    issuer: "Anthropic",
-    year: 2025
-  },
-  {
     title: "Building with the Claude API",
     issuer: "Anthropic",
-    year: 2025
+    year: 2026
   },
   {
     title: "Introduction to Model Context Protocol (MCP)",
     issuer: "Anthropic",
-    year: 2025
+    year: 2026
+  },
+  {
+    title: "Introduction to Agent Skills",
+    issuer: "Anthropic",
+    year: 2026
   },
   {
     title: "Claude Code in Action",
     issuer: "Anthropic",
-    year: 2025
+    year: 2026
   },
   {
     title: "Artificial Intelligence Fundamentals",
@@ -31,8 +31,8 @@ export const CERTIFICATIONS: Certification[] = [
     year: 2025
   },
   {
-    title: "Foundations: Data, Data Everywhere (Google Data Analytics)",
-    issuer: "Google",
+    title: "Foundations: Data, Data Everywhere",
+    issuer: "Google Data Analytics",
     year: 2025
   }
 ];

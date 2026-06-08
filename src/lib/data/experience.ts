@@ -13,14 +13,13 @@ export const JOBS: Job[] = [
     company: "Citrus Informatics India Pvt Ltd",
     location: "Kochi, Kerala",
     period: "Oct 2025 – Present",
-    stack: [".NET 4.7.2", "WinForms", "DevExpress 22.2.3", "WhatsApp API", "Telegram Bot API", "SQL Server"],
+    stack: [".NET 4.7.2", "WinForms", "DevExpress", "WhatsApp Business API", "Meta Template API", "Telegram Bot API", "SQL Server"],
     bullets: [
-      "Engineered a Meta-approved PDF document workaround for WhatsApp report delivery, enabling single-click dispatch to any patient with zero prior interaction.",
-      "Implemented a full 3-tab WhatsApp Settings module covering API tokens, template building with real-time Meta approval tracking, and per-patient delivery logs.",
-      "Architected a dual QR code Telegram patient registration strategy mapping patient ID parameters to bot URLs, ensuring seamless self-registration for walk-ins.",
-      "Developed a 3-step fallback registration flow (phone number → patient ID → anonymous chat) preventing communication blocks.",
-      "Constructed a real-time bidirectional staff-patient live chat inside the LIMS with file attachments, notifications, and RBAC security.",
-      "Self-initiated the entire patient messaging platform without a formal specification, designated as the highest-impact deliverable of the engagement by management."
+      "Designed and delivered a WhatsApp-based lab report dispatch system integrated into an existing .NET WinForms LIMS — replacing a fully manual process with automated, direct patient delivery via the WhatsApp Business API.",
+      "Developed a custom Meta message template builder within the LIMS UI, handling template creation, Meta submission, approval tracking, and a Send Logs dashboard with per-patient delivery status — eliminating dependency on the Meta Business portal.",
+      "Architected a Telegram Bot patient registration flow using a dual-QR approach: bill-specific QR codes for returning patients and a lab-wide QR for walk-in registration, with a three-step fallback to handle edge cases.",
+      "Built a real-time bidirectional messaging module inside the LIMS — staff-to-patient chat with PDF attachments, message management, and role-based access control restricting features to authorised staff.",
+      "Delivered the full messaging platform end-to-end, from API integration to UI, working closely with management to define requirements iteratively."
     ]
   },
   {
@@ -28,14 +27,15 @@ export const JOBS: Job[] = [
     company: "Citrus Informatics India Pvt Ltd",
     location: "Kochi, Kerala",
     period: "Mar 2023 – Sep 2025",
-    stack: ["Angular v12-v20", "TypeScript", "RxJS", "NgRx", "Ionic", "Azure DevOps", "REST APIs"],
+    stack: ["Angular v12–v20", "TypeScript", "RxJS", "NgRx", "Ionic", "Azure DevOps", "SCSS", "REST APIs"],
     bullets: [
-      "Launched 17+ production Angular SPAs and 5 Ionic mobile apps with a 30% faster turnaround time, powered by a custom shared library adopted org-wide.",
-      "Reduced mobile CI/CD release cycles from 48 hours to 3 hours (85% reduction) by building automated Azure DevOps build/sign/release pipelines.",
-      "Led 8 major version Angular upgrades (v12 to v20) across active enterprise applications with zero production downtime or incidents.",
-      "Optimized Web Vitals, improving page load and LCP by 25% through OnPush detection, lazy loading, and bundle analysis.",
-      "Acted as the company's sole Rapid Prototyping Lead with a 100% POC-to-production conversion rate.",
-      "Integrated AI tools (Cursor, Copilot, Gemini) to optimize boilerplate creation, shortening time-to-review."
+      "Developed and maintained 17+ production Angular applications across multiple client engagements, covering feature development, bug fixes, performance optimisation, and third-party API integration.",
+      "Built and shipped 5 cross-platform Ionic mobile apps for Android and iOS, including full CI/CD pipeline setup on Azure DevOps — reducing build and release time from ~48 hours to ~3 hours.",
+      "Led the Angular version migration from v12 to v20 across several active applications, managing breaking changes, NgRx upgrades, and coordinating testing with the team to maintain production stability.",
+      "Identified and resolved key frontend performance issues — including unnecessary change detection cycles and unoptimised bundles — improving load time and Lighthouse scores across client-facing apps.",
+      "Built an internal Angular component library (loaders, alert modals, activity log widgets) used across multiple projects to reduce duplication and standardise UI patterns.",
+      "Took ownership of new feature POCs assigned by management, delivering working prototypes within tight timelines that were subsequently adopted into production.",
+      "Designed modular frontend architecture using shared component libraries and lazy-loaded feature modules — improving scalability, reducing bundle size, and enabling independent development across multiple concurrent projects."
     ]
   },
   {
@@ -43,10 +43,10 @@ export const JOBS: Job[] = [
     company: "Citrus Informatics India Pvt Ltd",
     location: "Kochi, Kerala",
     period: "Sep 2022 – Mar 2023",
-    stack: ["Angular", "TypeScript", "RxJS", "DHTMLX Gantt"],
+    stack: ["Angular", "TypeScript", "DHTMLX Gantt"],
     bullets: [
-      "Promoted to full Software Engineer in 6 months (versus 12-month standard) by delivering a production-ready POC in week one with zero rework requests.",
-      "Completed a complex DHTMLX Gantt Chart module in 1 week (against a 4-week estimate), demoing directly to the client CTO."
+      "Promoted to Software Engineer after 6 months, ahead of the standard 12-month timeline, based on performance during the trainee period.",
+      "Built a DHTMLX Gantt Chart reporting module for a solar project management client — delivered within the first week, demonstrated to the client, and deployed to production without further revision."
     ]
   }
 ];
